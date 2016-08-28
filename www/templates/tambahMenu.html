@@ -1,0 +1,20 @@
+<ion-view title="Tambah Menu" id="tambahMenu">
+    <ion-content padding="true" class="has-header" lazy-scroll>
+        <h2>Menu {{ index }}</h2>
+        <form id="menu-form4" class="list">
+            <label class="item item-input" id="menu-input14">
+                <span class="input-label">Nama</span>
+                <input type="text" placeholder="Nama Kuliner" ng-model="menu.namaMenu">
+            </label>
+            <label class="item item-input " id="menu-input15">
+                <span class="input-label">Harga</span>
+                <input type="text" placeholder="Harga Kuliner" ng-model="menu.harga">
+            </label>
+            <label class="item item-input " id="menu-input16">
+                <span class="input-label">Review</span>
+                <input type="text" placeholder="Review" ng-model="menu.review">
+            </label>
+            <a id="menu-button10" class=" button button-positive  button-block " ng-click="tambahMenu()">Simpan</a>
+        </form>
+    </ion-content>
+</ion-view>

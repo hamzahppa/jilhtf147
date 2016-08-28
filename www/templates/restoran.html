@@ -1,0 +1,55 @@
+<ion-view title="Restoran" id="page4">
+    <ion-content padding="true" class="has-header" lazy-scroll>
+        <div>
+            <img image-lazy-src="{{ restoran.gambar[0] }}" width="100%" height="auto" style="display: block; margin-left: auto; margin-right: auto;" image-lazy-distance-from-bottom-to-load="50">
+        </div>
+        <h1 id="restoran-heading1" style="color:#000000;">{{ restoran.index }}</h1>
+        <form id="restoran-form1" class="list ">
+            <label class="item item-input " id="restoran-input1">
+                <span class="input-label">Nama</span>
+                <input type="text" placeholder="Nama Kuliner" ng-model="restoran.namaResto">
+            </label>
+            <label class="item item-input " id="restoran-input3">
+                <span class="input-label">Alamat</span>
+                <input type="text" placeholder="Alamat Kuliner" ng-model="restoran.alamat">
+            </label>
+            <label class="item item-input " id="restoran-input4">
+                <span class="input-label">Buka</span>
+                <input type="text" placeholder="Keterangan Buka" ng-model="restoran.keteranganBuka">
+            </label>
+            <label class="item item-input " id="restoran-input7">
+                <span class="input-label">Telepon</span>
+                <input type="text" placeholder="Nomor Telepon" ng-model="restoran.noTelp">
+            </label>
+            <label class="item item-input " id="restoran-input5">
+                <span class="input-label">Keterangan</span>
+                <input type="text" placeholder="Keterangan Kuliner" ng-model="restoran.keteranganResto">
+            </label>
+            <label class="item item-input " id="restoran-input8">
+                <span class="input-label">Review</span>
+                <input type="text" placeholder="Review Kuliner" ng-model="restoran.reviewTim">
+            </label>
+            <label class="item item-input " id="restoran-input10">
+                <span class="input-label">Rating</span>
+                <input type="text" placeholder="Rating" ng-model="restoran.ratingTim">
+            </label>
+            <label class="item item-input " id="restoran-input9">
+                <span class="input-label">Latitude</span>
+                <input type="text" placeholder="Latitude" ng-model="restoran.map.lat">
+            </label>
+            <label class="item item-input " id="restoran-input11">
+                <span class="input-label">Longitude</span>
+                <input type="text" placeholder="Longitude" ng-model="restoran.map.long">
+            </label>
+            <button id="restoran-button4" class=" button button-positive  button-block ">Simpan</button>
+            <h1 id="restoran-heading2" style="color:#000000;">Menu</h1>
+            <ion-item class="item-thumbnail-left" id="restoran-list-item9" ui-sref="mangan.menu({id:restoran.index, index:$index})" ng-repeat="menu in menus track by $index">
+                <img image-lazy-src="{{ menu.gambar }}" image-lazy-distance-from-bottom-to-load="50">
+                <h2>{{ menu.namaMenu }}</h2>
+                <p>{{ menu.harga }}</p>
+            </ion-item>
+            <a ui-sref="mangan.tambahMenu({idResto:restoran.index})" id="restoran-button6" class=" button button-positive  button-block ">Tambah Menu</a>
+            <!-- <div class="spacer" style="height: 100px;"></div> -->
+        </form>
+    </ion-content>
+</ion-view>

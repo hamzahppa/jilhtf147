@@ -1,0 +1,49 @@
+<ion-view title="Tambah Restoran" id="tambahRestoran">
+    <ion-content padding="true" class="has-header" lazy-scroll>
+        <form id="restoran-form1" class="list ">
+            <label class="item item-input " id="restoran-input1">
+                <span class="input-label">Index</span>
+                <input type="text" placeholder="Index Kuliner" ng-model="restoran.index">
+            </label>
+            <label class="item item-input " id="restoran-input1">
+                <span class="input-label">Nama</span>
+                <input type="text" placeholder="Nama Kuliner" ng-model="restoran.namaResto">
+            </label>
+            <label class="item item-input " id="restoran-input3">
+                <span class="input-label">Alamat</span>
+                <input type="text" placeholder="Alamat Kuliner" ng-model="restoran.alamat">
+            </label>
+            <label class="item item-input " id="restoran-input4">
+                <span class="input-label">Buka</span>
+                <input type="text" placeholder="Keterangan Buka" ng-model="restoran.keteranganBuka">
+            </label>
+            <label class="item item-input " id="restoran-input7">
+                <span class="input-label">Telepon</span>
+                <input type="text" placeholder="Nomor Telepon" ng-model="restoran.noTelp">
+            </label>
+            <label class="item item-input " id="restoran-input5">
+                <span class="input-label">Keterangan</span>
+                <input type="text" placeholder="Keterangan Kuliner" ng-model="restoran.keteranganResto">
+            </label>
+            <label class="item item-input " id="restoran-input8">
+                <span class="input-label">Review</span>
+                <input type="text" placeholder="Review Kuliner" ng-model="restoran.reviewTim">
+            </label>
+            <label class="item item-input " id="restoran-input10">
+                <span class="input-label">Rating</span>
+                <input type="text" placeholder="Rating" ng-model="restoran.ratingTim">
+            </label>
+            <label class="item item-input " id="restoran-input9">
+                <span class="input-label">Latitude</span>
+                <input type="text" placeholder="Latitude" ng-model="restoran.map.lat">
+            </label>
+            <label class="item item-input " id="restoran-input11">
+                <span class="input-label">Longitude</span>
+                <input type="text" placeholder="Longitude" ng-model="restoran.map.long">
+            </label>
+            <button id="restoran-button4" class=" button button-positive  button-block " ng-click="tambahRestoran()">Simpan</button>
+            <!-- <a ui-sref="mangan.tambahMenu" id="restoran-button6" class=" button button-positive  button-block ">Tambah Menu</a> -->
+            <!-- <div class="spacer" style="height: 100px;"></div> -->
+        </form>
+    </ion-content>
+</ion-view>

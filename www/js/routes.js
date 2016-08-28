@@ -1,4 +1,4 @@
-angular.module('app.routes', ['ionicUIRouter'])
+angular.module('app.routes', [])
 
 .config(function($stateProvider, $urlRouterProvider) {
 
@@ -8,88 +8,128 @@ angular.module('app.routes', ['ionicUIRouter'])
   // Each state's controller can be found in controllers.js
   $stateProvider
 
-  .state('tabsController.order', {
-    url: '/page2',
+  .state('mangan.restorans', {
+    url: '/page1',
     views: {
-      'tab1': {
-        templateUrl: 'templates/order.html',
-        controller: 'orderCtrl'
+      'side-menu21': {
+        templateUrl: 'templates/restorans.html',
+        controller: 'restoransCtrl'
       }
     }
   })
 
-  .state('tabsController.proses', {
+  .state('mangan.promos', {
     url: '/page3',
     views: {
-      'tab2': {
-        templateUrl: 'templates/proses.html',
-        controller: 'prosesCtrl'
+      'side-menu21': {
+        templateUrl: 'templates/promos.html',
+        controller: 'promosCtrl'
       }
     }
   })
 
-  .state('tabsController.riwayat', {
-    url: '/page4',
-    views: {
-      'tab3': {
-        templateUrl: 'templates/riwayat.html',
-        controller: 'riwayatCtrl'
-      }
-    }
-  })
-
-  .state('tabsController', {
-    url: '/page1',
-    templateUrl: 'templates/tabsController.html',
+  .state('mangan', {
+    url: '/side-menu21',
+    templateUrl: 'templates/mangan.html',
     abstract:true
   })
 
-  .state('login', {
-    url: '/page5',
-    templateUrl: 'templates/login.html',
-    controller: 'loginCtrl'
+  .state('mangan.restoran', {
+    url: '/page4',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/restoran.html',
+        controller: 'restoranCtrl'
+      }
+    },
+    params: {
+      index: null
+    }
   })
 
-  /* 
-    The IonicUIRouter.js UI-Router Modification is being used for this route.
-    To navigate to this route, do NOT use a URL. Instead use one of the following:
-      1) Using the ui-sref HTML attribute:
-        ui-sref='tabsController.transaksi'
-      2) Using $state.go programatically:
-        $state.go('tabsController.transaksi');
-    This allows your app to figure out which Tab to open this page in on the fly.
-    If you're setting a Tabs default page or modifying the .otherwise for your app and
-    must use a URL, use one of the following:
-      /page1/tab1/page6
-      /page1/tab2/page6
-      /page1/tab3/page6
-  */
-  .state('tabsController.transaksi', {
+  .state('mangan.login', {
     url: '/page6',
     views: {
-      'tab1': {
-        templateUrl: 'templates/transaksi.html',
-        controller: 'transaksiCtrl'
-      },
-      'tab2': {
-        templateUrl: 'templates/transaksi.html',
-        controller: 'transaksiCtrl'
-      },
-      'tab3': {
-        templateUrl: 'templates/transaksi.html',
-        controller: 'transaksiCtrl'
+      'side-menu21': {
+        templateUrl: 'templates/login.html',
+        controller: 'loginCtrl'
       }
     }
   })
 
-  .state('ditolak', {
+  .state('mangan.menu', {
     url: '/page7',
-    templateUrl: 'templates/ditolak.html',
-    controller: 'ditolakCtrl'
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/menu.html',
+        controller: 'menuCtrl'
+      }
+    },
+    params: {
+      id: null,
+      index: null
+    }
   })
 
-$urlRouterProvider.otherwise('/page5')
+  .state('mangan.promo', {
+    url: '/page8',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/promo.html',
+        controller: 'promoCtrl'
+      }
+    },
+    params: {
+      index: null
+    }
+  })
 
+  .state('mangan.pencarian', {
+    url: '/page9',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/pencarian.html',
+        controller: 'pencarianCtrl'
+      }
+    },
+    params: {
+      query: null
+    }
+  })
+
+  .state('mangan.tambahRestoran', {
+    url: '/tambahRestoran',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/tambahRestoran.html',
+        controller: 'tambahRestoranCtrl'
+      }
+    }
+  })
   
+  .state('mangan.tambahMenu', {
+    url: '/tambahMenu',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/tambahMenu.html',
+        controller: 'tambahMenuCtrl'
+      }
+    },
+    params: {
+      idResto: null
+    }
+  })
+
+  .state('mangan.tambahPromo', {
+    url: '/tambahPromo',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/tambahPromo.html',
+        controller: 'tambahPromoCtrl'
+      }
+    }
+  })
+
+$urlRouterProvider.otherwise('/side-menu21/page1')
 
 });

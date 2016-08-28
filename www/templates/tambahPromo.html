@@ -1,0 +1,23 @@
+<ion-view title="Promo" id="tambahPromo">
+    <ion-content padding="true" class="has-header" lazy-scroll>
+        <form id="tambahPromo-form5" class="list ">
+            <label class="item item-input " id="tambahPromo-input19">
+                <span class="input-label">Indeks</span>
+                <input type="text" placeholder="Indeks Kuliner Promo" ng-model="promo.kuliner">
+            </label>
+            <label class="item item-input " id="tambahPromo-input17">
+                <span class="input-label">Nama</span>
+                <input type="text" placeholder="Promo Kemerdekaan" ng-model="promo.namaPromo">
+            </label>
+            <label class="item item-input " id="tambahPromo-input18">
+                <span class="input-label">Keterangan</span>
+                <input type="text" placeholder="Keterangan" ng-model="promo.keterangan">
+            </label>
+            <label class="item item-input " id="tambahPromo-input20">
+                <span class="input-label">Valid</span>
+                <input type="text" placeholder="Tanggal Valid Promo" ng-model="promo.valid">
+            </label>
+        </form>
+        <a ui-sref="mangan.promo" id="tambahPromo-button11" class=" button button-positive  button-block " ng-click="tambahPromo()">Simpan</a>
+    </ion-content>
+</ion-view>

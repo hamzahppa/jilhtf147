@@ -1,0 +1,23 @@
+<ion-view title="Menu" id="page7">
+    <ion-content padding="true" class="has-header" lazy-scroll>
+        <div>
+            <img image-lazy-src="{{ menu.reviewGambar }}" width="100%" height="auto" style="display: block; margin-left: auto; margin-right: auto;" image-lazy-distance-from-bottom-to-load="50">
+        </div>
+        <form id="menu-form4" class="list ">
+            <label class="item item-input " id="menu-input14">
+                <span class="input-label">Nama</span>
+                <input type="text" placeholder="Nama Kuliner" ng-model="menu.namaMenu">
+            </label>
+            <label class="item item-input " id="menu-input15">
+                <span class="input-label">Harga</span>
+                <input type="text" placeholder="Harga Kuliner" ng-model="menu.harga">
+            </label>
+            <label class="item item-input " id="menu-input16">
+                <span class="input-label">Review</span>
+                <input type="text" placeholder="Review" ng-model="menu.review">
+            </label>
+            <a ui-sref="mangan.restoran" id="menu-button10" class=" button button-positive  button-block ">Simpan</a>
+            <div class="spacer" style="height: 100px;"></div>
+        </form>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,28 @@
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-stable">
+            <ion-nav-back-button></ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="side-menu21"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left" id="side-menu21">
+        <ion-header-bar class="bar-stable">
+            <div class="title">Mangan</div>
+        </ion-header-bar>
+        <ion-content padding="false" class="side-menu-left has-header">
+            <ion-list id="mangan-list5">
+                <ion-item class="item-avatar  " id="mangan-list-item4">
+                    <img ng-src="https://firebasestorage.googleapis.com/v0/b/project-1449647215698534337.appspot.com/o/reviewer%2Famy%2Famy.jpeg?alt=media&token=6884b7c6-be2a-4234-af55-5ca8b3948841">
+                    <h2>Ami</h2>
+                    <p>Administrator</p>
+                </ion-item>
+                <ion-item id="mangan-list-item1" ui-sref="mangan.restorans" menu-close="">Kuliner</ion-item>
+                <ion-item id="mangan-list-item3" ui-sref="mangan.promos" menu-close="">Promo</ion-item>
+            </ion-list>
+            <a menu-close="" ui-sref="mangan.login" id="mangan-button9" class=" button button-positive  button-full button-outline ">Keluar</a>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>
