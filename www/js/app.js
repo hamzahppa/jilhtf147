@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives','app.services',])
+angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives','app.services', 'ionicLazyLoad'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -21,3 +21,22 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
     }
   });
 })
+
+.config(['$ionicConfigProvider', function($ionicConfigProvider) {
+    // $ionicConfigProvider.tabs.position('bottom'); // other values: top
+    $ionicConfigProvider.navBar.alignTitle('center');
+}])
+
+.filter('orderObjectBy', function() {
+  return function(items, field, reverse) {
+    var filtered = [];
+    angular.forEach(items, function(item) {
+      filtered.push(item);
+    });
+    filtered.sort(function (a,b) {
+      return (a[field] > b[field] ? 1: -1);
+    });
+    if (reverse) filtered.reverse();
+    return filtered;
+  };
+});

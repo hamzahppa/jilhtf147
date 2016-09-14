@@ -1,0 +1,20 @@
+<ion-view title="Daftar Restoran" id="page1">
+    <ion-content padding="true" class="has-header" lazy-scroll>
+        <ion-list id="kuliner-list1">
+            <form ng-submit="searchQuery()">
+                <label class="item item-input">
+                    <i class="icon ion-search placeholder-icon"></i>
+                    <input type="search" placeholder="Cari" ng-model="user.query">
+                </label> 
+            </form>
+        </ion-list>
+        <a ui-sref="mangan.tambahRestoran" id="kuliner-button1" class=" button button-positive  button-block button-outline ">Tambah</a>
+        <ion-list id="kuliner-list2">
+            <ion-item class="item-thumbnail-left" id="kuliner-list-item6" ui-sref="mangan.restoran({index:restoran.index})" ng-repeat="restoran in restorans | orderObjectBy: 'tglInput' :true track by restoran.index">
+                <img image-lazy-src="{{ restoran.gambar[0] }}" image-lazy-distance-from-bottom-to-load="50">
+                <h2>{{ restoran.namaResto }}</h2>
+                <p>{{ restoran.index }}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

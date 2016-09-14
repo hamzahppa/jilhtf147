@@ -1,0 +1,12 @@
+<ion-view title="Daftar Promo" id="page3">
+    <ion-content padding="true" class="has-header" lazy-scroll>
+        <a ui-sref="mangan.promo" id="promo-button2" class=" button button-positive  button-block button-outline ">Tambah Promo</a>
+        <ion-list id="promo-list3">
+            <ion-item class="item-thumbnail-left" id="promo-list-item8" ui-sref="mangan.promo({index: promo.index})" ng-repeat="promo in promos">
+                <img image-lazy-src="{{ promo.gambar }}" image-lazy-distance-from-bottom-to-load="50">
+                <h2>{{ promo.namaPromo }}</h2>
+                <p style="white-space:normal;">{{ promo.valid }}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
